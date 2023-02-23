@@ -4,7 +4,7 @@
         <div class="foot-logo">
             <img src="./img/usalama-logo-removebg-preview.png" alt="">
             <p>info@usalama.com</p>
-            <p>+243 900 000 000</p>
+            <p+> 243977088570</p>
             <p class="droit">@ 2022-2023 tout droit reservé à Usalama</p>
         </div>
 

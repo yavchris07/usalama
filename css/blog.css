@@ -795,7 +795,7 @@ transition: all .45s ease;
 /* ===========================================   LES ARTICLES =================================== */
 .direction{
   width: 100%;
-  height: 180px;
+  height: 200px;
   margin-top: 50px;
   background-color: var(--kbg);
 }
@@ -804,7 +804,7 @@ transition: all .45s ease;
   background: transparent;
   display: flex;
   justify-content: space-around;
-  padding: 60px 40px;
+  padding: 70px 40px;
 }
 
 .direction .child .chemin{
@@ -836,16 +836,17 @@ transition: all .45s ease;
 /* ==========================================   End   ====================================== */
 /* ==========================================  Apropos ====================================== */
 .contents{
-  width: 70%;
+  width: 60%;
   margin: auto;
   margin-top: 20px;
+  text-align: center;
  
 }
 
 .contents p{
-  font-size:18px;
+  font-size:20px;
   font-weight: 300px;
-  text-align:justify;
+  text-align:center;
   margin-bottom: 20px;
 }
 

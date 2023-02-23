@@ -5,55 +5,33 @@
     <div class='child'>
         <div class='chemin'>
             <h4>Usalama kwetu</h4>
-            <p>La securite est notre but</p>
+            <p>Alerte de la securite </p>
         </div>
         <p> Accueil / apropos </p>
     </div>
 </section>
 <div class="all-title">
-    <h2>Apropos de USALAMA </h2>
-    <p>Usalama .......................................</p>
+    <h2>USALAMA </h2>
+    <p>Usalama une priorité</p>
 </div>
 
     <div class="contents">
-        <p>
-            Plus de deux millions d’habitants, Goma est une agglomération en pleine expansion connue comme étant la ville la plus propre du pays 
-            et reste en même temps un endroit qui attire beaucoup de touristes en comparant avec les autres villes nationales.
-            Une population travailleuse venue de plusieurs coins du pays, d’Afrique et du monde entier, cette ville ne cesse de nous rendre amoureux d’elle.
+        <p>Nous sommes des lanceurs d’alerte!</p>
+        <p>Nous sommes la lueur qui éclaire dans ce gouffre d’imprudence et de la négligence
+        sociale !</p>
+        <p>Nous sommes vous !</p>
+        <p>  Des incidents malheureux font des victimes dans des situations pourtant</p>
+        <p> préalablement évitables. Il s’observe l’absence de sonneur d'alarme afin d'alerter la</p>
+        <p>société au sujet des dangers qui la hante. C'est ainsi qu'une solution palliative a été</p>
+        <p>envisagée, USALAMA, qui est une initiative des jeunes chercheurs en journalisme et</p>
+        <p>en sécurité électronique, un blog en ligne qui se veut spécialisé dans la sécurité
+        sociale.</p>
+        <p>« USALAMA » </p>
+        <p>est un média en ligne qui a pour préoccupation majeure d’informer sur les zones à risques,les zones à éviter et les précautions à prendre.</p>
+       <p>Pour votre sécurité , il est conseillé de parcourir nos articles avant de sortir de chez
+        vous .
         </p>
-
-        <p>
-            Chaque jour elle crée, exploite, innove et apporte un changement majeur dans tous les secteurs d’activités.
-            Mais quelle plateforme met en valeur toutes les réalisations que les filles et fils de cette ville ne cessent d’accomplir?
-        </p>
-
-        <p>
-            Jusqu’a lors, il n’existe aucune plateforme de media,
-            aucune société de publicité ou une institution qui se focalise uniquement sur la réputation de la ville de Goma.
-        </p>
-
-        <p>
-            Pluziers a vu un grand vide, une histoire qui devrait être rencontrée au monde entier mais qui reste sous-exploitée 
-            suite au manque d’initiation de plusieurs médias locaux et plateformes d’informations.
-        </p>
-
-        <p>
-            Pluziers est une plateforme qui a pour but d’informer, d’une manière détaillée et expérimentée, 
-            toute personne qui a un intérêt économique ou particulier avec la ville de Goma ou tout celui qui veut 
-            y monter une affaire ou tout celui qui veut avoir des nouvelles économiques de cette dernière.
-
-        </p>
-
-        <p>
-            Pluziers est dans un autre sens une vitrine d’informations et divertissement, 
-            de recherche et statiques, de récolte de données et d’informations relatives à la ville de Goma et ses activités en général.
-        </p>
-
-        <p>
-            Pluziers veut se donner cette tâche de devenir 
-            la référence en matière de mises à jour avec une liste de programmes et activités enrichie.
-        </p>       
-        
+        <!-- https://yavchris07.github.io/usalama/ -->
     </div>
 
 <?php require './footer.php'?>

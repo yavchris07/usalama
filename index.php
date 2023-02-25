@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require  './header.php';?>
+<?php 
+    require  './header.php';
+    //fetching data
+?>
 
 
     <section class='usalama'>
         <div class='child'>
-            <h4>USALAMA KWETU</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestiae accusamus? Eius, facere exercitationem! In quidem quas tempora veniam, asperiores nisi nobis facere, itaque deleniti vel qui, officiis aliquid placeat.</p>
+            <h4>USALAMA </h4>
+            <p class='slogan'>INFORMEZ POUR SAUVEZ DES VIES</p>
+            <p>Nos articles portent sur de zones que vous devrez imperativement éviter, des choses que vous pouvez ou ne pouvez pas faire pour garantir votre securité dans la vie de Goma</p>
         </div>
+            
     </section>
 
-    <div class="online-title">
+    <div class="all-title">
         <h4>Les plus recents</h4>
         <!-- <hr /> -->
     </div>
@@ -18,21 +23,33 @@
      <!-- <div class="online"> -->
         <div class="carousel">
             <div class="carousel-inner">
-                <div style="background-color: rgba(235, 149, 50, 0.5);" class="carousel-item">
-                        <!-- <img src="./img/DSC_1.jp" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                        <h1>usalama 1</h1>
-                </div>
-                <div style="background-color: greenyellow;"  class="carousel-item">
-                    <!-- <img src="./img/DSC2.jpg" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                    <h1>kwetu usalama </h1>
-                </div>
-                <div style="background-color: rgb(37, 150, 255);" class="carousel-item">
-                    <!-- <img src="./img/DSC_10.jpg" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                    Usalama niya maana sana 
-                </div>
-                <div style="background-color: rgb(192, 192, 192);" class="carousel-item">
-                    <img src="./img/4.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
+
+            <?php
+                require './admin/cores/db.php';
+                $cover = $db->query("SELECT  * FROM blogs ORDER BY id DESC limit 7");
+                while($All = $cover->fetch()){
+                    echo "
+                    <div 
+                        class='carousel-item'
+                        style='background-color: rgba(235, 149, 50, 0.5)' 
+                    >
+                        <img 
+                            style='width: 100%; height: 100%; object-fit: cover;'
+                            src='./admin/cores/images/".$All['photo_cover']."' 
+                            alt=''
+                        />
+                    </div>
+                    ";
+                }
+            ?> 
+                <!-- <div 
+                    style="background-color: rgba(235, 149, 50, 0.5);" 
+                    class="carousel-item"
+                >
+                    <img 
+                    src="" 
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                </div> -->
             </div>
 
             <div class="carousel-controls">
@@ -45,208 +62,40 @@
 
 
     <div class="all-title">
-        <h2>Un peu de lecture vous sera du bien </h2>
-        <p>Les infos ici concernent la securite dans # quartier de la ville de Goma</p>
+        <h2>Un peu de lecture vous fera du bien </h2>
+        <p>Les infos ici concernent la securité dans différents quartiers de la ville de Goma</p>
     </div>
 
     <div class="recent-container">
         
-            <div class="recent-card">
-                <a href="./article.php" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_9.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
+        <?php
+            require './admin/cores/db.php';
+            $cover = $db->query("SELECT * FROM blogs ORDER BY id DESC limit 9");
+            while($All = $cover->fetch()){
+                echo"
+                <div class='recent-card'>
+                    <a href='./article.php?article=".$All['id']."' class='card-link'>
+                    <div class='card-child1'>
+                        <img 
+                            src='./admin/cores/images/".$All['photo2']."'
+                            class=pic
+                        >
                     </div>
-                    <div class="child2">
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-       
-
-        <div class="recent-card">
-            <a href="./article.php" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_12.jpg" class="pic">
-                </div>
                     
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
+                    <div class='card-child2'>
+                    <div class='child1'>
+                        <p>".$All['titre']."</p>
                     </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
+                        <div class='child2'>
+                            <p>".$All['dates']."</p>
+                            <p>".$All['heure']."</p>
+                        </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-
-        <div class="recent-card">
-            <a href="./article.php" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_7.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="recent-card">
-            <a href="./article.php" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_9.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-       
-
-        <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_12.jpg" class="pic">
-                </div>
-                    
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_7.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="recent-card">
-                <a href="./blogs/single-card.html" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_9.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-       
-
-        <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_12.jpg" class="pic">
-                </div>
-                    
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-                <div class="card-child1">
-                    <img src="./img/DSC_7.jpg" class="pic">
-                </div>
-            
-                <div class="card-child2">
-                    <div class="child1">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                            neque impedit, 
-                        </p>
-                    </div>
-                    <div class="child2">
-                        <!-- <h4>BUSINESS </h4> -->
-                            <p>Le 20/12/2022</p>
-                            <p>11h:50</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
+                
+            ";}
+        ?>
     </div>
 
     <div class="all-buttons-container">

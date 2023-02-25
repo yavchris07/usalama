@@ -5,216 +5,46 @@
 <section class='direction'>
     <div class='child'>
         <div class='chemin'>
-            <h4>Usalama kwetu</h4>
-            <p>La securite est notre but</p>
+            <h4>Usalama Alerte</h4>
+            <p>Informez pour sauver des vies</p>
         </div>
         <p> Article / les articles </p>
     </div>
 </section>
 
 <div class="all-title">
-    <h2>Les articles parlant de la securite </h2>
-    <p>Usalama donne des infos de la securite dans différents quartiers de la ville de Goma</p>
+    <h2>Les articles parlant de la securité </h2>
+    <p>Usalama donne des infos de la securité  des différents quartiers de la ville de Goma</p>
 </div>
 
 <div class="recent-container">
-        
-        <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_9.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
+    <?php
+        require './admin/cores/db.php';
+        $cover = $db->query("SELECT * FROM blogs ORDER BY id DESC");
+        while($All = $cover->fetch()){
+            echo"
+                <div class='recent-card'>
+                <a href='./article.php?article=".$All['id']."' class='card-link'>
+                    <div class='card-child1'>
+                        <img 
+                            src='./admin/cores/images/".$All['photo2']."'
+                            class=pic
+                        >
+                    </div>
+                    <div class='card-child2'>
+                    <div class='child1'>
+                        <p>".$All['titre']."</p>
+                    </div>
+                        <div class='child2'>
+                            <p>".$All['dates']."</p>
+                            <p>".$All['heure']."</p>
+                        </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="child2">
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-            </a>
-        </div>
-   
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_12.jpg" class="pic">
-            </div>
                 
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_7.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_9.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-            </a>
-        </div>
-   
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_12.jpg" class="pic">
-            </div>
-                
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_7.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="recent-card">
-            <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_9.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-            </a>
-        </div>
-   
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_12.jpg" class="pic">
-            </div>
-                
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="recent-card">
-        <a href="./blogs/single-card.html" class="card-link">
-            <div class="card-child1">
-                <img src="./img/DSC_7.jpg" class="pic">
-            </div>
-        
-            <div class="card-child2">
-                <div class="child1">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem reprehenderit
-                        neque impedit, 
-                    </p>
-                </div>
-                <div class="child2">
-                    <!-- <h4>BUSINESS </h4> -->
-                        <p>Le 20/12/2022</p>
-                        <p>11h:50</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
+        ";}
+    ?>
 </div>
 
 

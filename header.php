@@ -11,19 +11,14 @@
         <div class="logo">
             <a href="./index.php">
             <!-- <span>Usalama</span> -->
-            <img src="./img/usalama-logo.png" alt="" srcset="">
+            <img src="./img/usalama-logo.png" alt="">
             </a>
-        </div>
+        </div>   
         <div class="list">
             <ul>
                 <li><a href="./apropos.php">Apropos</a></li>
                 <li> <a href="./contact.php">Contactez-nous</a></li>
                 <li><a href="./index.php">Accueil</a></li>
             </ul>
-        </div>
-
-        <div class="icon-phone" id="menu">
-            <!-- <img src="./img/fidba-logo.jpeg"> -->
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAJxJREFUOE/tk9ENwjAMRN9NwAodgQ1gEzpCN4BRGAU2gA0YoZ3gKiQQAjWpE6nip5byZz/bl7NYILQAkxX6UdV2CxwqdL5L6t51X5raPgHHCuhV0j4FbYDnK41e0m0SWkpK5WctZXsLbALNhvCkti/ALgBNa/pb/HJDROOHpPP/NA2sPZlSdPuZ40ibf26yzHHEP2quSZVPV2iVAiMRQygWdMJlfwAAAABJRU5ErkJggg==" style="color: #b25A06;"/>
         </div>
     </nav>

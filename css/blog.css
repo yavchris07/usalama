@@ -102,7 +102,7 @@ transition: all .45s ease;
   color: var(--kprimary);
   text-align: center;
   align-content: center;
-  background: rgb(0, 0, 0,.8);
+  background: rgb(0, 0, 0,.4);
 }
 
 .usalama .child .slogan{
@@ -114,8 +114,8 @@ transition: all .45s ease;
 }
 
 .usalama .child h4{
-  font-size: 40px;
-  padding-top:17rem;
+  font-size: 60px;
+  padding-top:14rem;
 }
 .usalama .child p{
   color: var(--kwhite);
@@ -267,7 +267,7 @@ transition: all .45s ease;
  
 .recent-container .recent-card{
     background: transparent;
-    width: 370px;
+    width: 330px;
     height: 340px;
     margin: auto;
     margin-top: 10px;
@@ -497,29 +497,66 @@ transition: all .45s ease;
   margin: auto;
   display: block;
   margin-top: 20px;
+  text-align: justify;
 }
 
-.single-card-container .o1{
+.single-card-container .start{
   width: 100%;
-  height: 500px;
+  height: 470px;
   background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.single-card-container .o1 .oo1{
+.single-card-container .start .start-picture{
   width: 100%;
   height: 100%;
   background: black;
-}
-.single-card-container .o1 .oo1 img{
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
+/* .single-card-container .start .start-picture img{
+  width: 100%;
+  height: 100%;
+} */
 
+/* More articles */
+.single-card-container .read-more{
+  margin-top: 17px;
+}
+.single-card-container .more-article{
+  background: transparent;
+  width: 100%;
+  height: 250px;
+  display: flex;
+ 
+}
+.more-card{
+  width: 170px;
+  height: 220px;
+  margin: auto;
+  /* border: 1px solid var(--kbg); */
+  text-align: center;
+}
+.more-card img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover
+}
+
+.more-card h4{
+  font-size: 10px;
+}
+.more-card a{
+  font-size: 17px;
+  color: var(--kprimary);
+  border: 1px solid var(--kprimary);
+  padding: 0px 45px;
+  background: transparent;
+}
+/* ==================================================================== */
 .photo-single{
   position: relative;
   /* align-items: center; */
@@ -532,8 +569,6 @@ transition: all .45s ease;
 .photo-single img{
 width: 50%;
 object-fit: cover;
-/* margin-left: 10px; */
-  /* height: 100%; */
 }
 
 .partie-deux{
@@ -562,10 +597,14 @@ object-fit: cover;
 .partie-deux .image3 .sous-un{
   width: 50%;
   height: 100%;
+  border: 1px solid var(--kgray);
+  object-fit: cover;
 }
 .partie-deux .image3 .sous-deux{
   width: 50%;
   height: 100%;
+  border: 1px solid var(--kgray);
+  object-fit: cover;
 }
 
 .article-type{
@@ -606,7 +645,39 @@ margin-top: 20px;
 
 }
 /* ===================================================================================================== */
+/* ======================================== CONTACTS =================================================== */
+.container{
+  background:  transparent;
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
 
+.container h5{
+  margin-bottom: 10px;
+}
+.container .item{
+  width: 300px;
+  height: 40px;
+  background: var(--kbg);
+  border-right: 3px solid #1e377c;
+  margin: auto;
+  margin-bottom: 7px;
+  padding: 10px;
+  /* text-align: center; */
+}
+.container .items{
+  width: 300px;
+  height: 40px;
+  background: var(--kbg);
+  border-left: 3px solid green;
+  margin: auto;
+  margin-bottom: 7px;
+  padding: 10px;
+}
+/* ===================================================================================================== */
 /* responsivite */
 @media screen and (max-width: 1024px){
   .nav{
@@ -633,7 +704,6 @@ margin-top: 20px;
     background: var(--kwhite);
     
   }
-  
   .nav .list{
     position: absolute;
     background:  transparent;
@@ -641,6 +711,15 @@ margin-top: 20px;
     right: 0;
     margin-bottom: 50px;
   }
+  .nav .list ul li{
+    padding: 0;
+    margin: 3px;
+  }
+  .list ul li a:hover{
+    text-decoration: none;
+    color: #000;
+    border-bottom: none;
+  } 
   .nav .list ul li a{
     font-size: 14px;
   }
@@ -707,7 +786,7 @@ margin-top: 20px;
     color: var(--kprimary);
     text-align:  center;
     align-content: center;
-    background: rgb(0, 0, 0,.8);
+    background: rgb(0, 0, 0,.5);
   }
   .usalama .child h4{
     font-size: 30px;
@@ -737,6 +816,7 @@ margin-top: 20px;
     /* flex-direction: column; */
   }
 
+  
 
   /* ====== apropos ======= */
   .contents{

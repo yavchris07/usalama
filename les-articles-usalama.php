@@ -5,7 +5,7 @@
 <section class='direction'>
     <div class='child'>
         <div class='chemin'>
-            <h4>Usalama Alerte</h4>
+            <h4>Usalama </h4>
             <p>Informez pour sauver des vies</p>
         </div>
         <p> Article / les articles </p>
@@ -27,7 +27,7 @@
                 <a href='./article.php?article=".$All['id']."' class='card-link'>
                     <div class='card-child1'>
                         <img 
-                            src='./admin/cores/images/".$All['photo2']."'
+                            src='./admin/cores/images/".$All['photo_cover']."'
                             class=pic
                         >
                     </div>
@@ -46,33 +46,5 @@
         ";}
     ?>
 </div>
-
-
-<!-- <div class="all-title">
-    <h2>plus d'articles </h2>
-    <p>Usalama ######## de la securite de la ville de Goma</p>
-</div>
-
-<div class="carousels">
-    <div class="carousel-inner">
-        <div style="background-color: rgba(235, 149, 50, 0.5);" class="carousel-item">
-            <h1>usalama 1</h1>
-        </div>
-        <div style="background-color: greenyellow;"  class="carousel-item">
-            <h1>kwetu usalama </h1>
-        </div>
-        <div style="background-color: rgb(37, 150, 255);" class="carousel-item">
-                Usalama niya maana sana 
-        </div>
-    </div>
-
-    <div class="carousel-controls">
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-    <div class="carousel-indicators"></div>
-</div> -->
-
-
 
 <?php require './footer.php'?>

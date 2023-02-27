@@ -12,7 +12,7 @@
         <div class="foot-container-adresse">
             <h3>Nos adresses</h3>
             <p>Commune de goma, Q. Kyeshero</p>
-            <p>En diagonal de la cathedrale </p>
+            <p>En diagonal de La cathédrale </p>
         </div>
 
         <div class="icons">

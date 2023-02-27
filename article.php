@@ -62,72 +62,63 @@
         </div>
     <hr class="hr">
 
-    <div class='o1'>
+    <div class='start'>
         <img
             src="./admin/cores/images/<?php echo $photo_cover; ?>" 
-            alt="" class='oo1'
+            alt="" 
+            class='start-picture'
         >
     </div>
-<!-- 
-        <div class="photo-single">
-            <div class="article-type">
-                <h4>
-                    Resume d'article
-                </h4>
-                 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Id atque beatae debitis voluptatibus temporibus eveniet minima perspiciatis omnis eligendi? 
-                    Animi voluptatibus earum itaque, nam id vero rerum porro cumque corrupti.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, 
-                    nesciunt quod. Corrupti vitae cumque in, repellat quos ipsa ut iste quod necessitatibus nobis. 
-                    Expedita quibusdam possimus temporibus eaque aliquid provident.
-                </p>
-
-                <div class="icons">
-                    <a href="">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-
-            <img src="./img/DSC_13.jpg" class="img">
-        </div> -->
-        <div>
-            <?php echo $resumes; ?>
-        </div>
-        
-        <div class='partie-deux'>
-            <img 
-                src="./admin/cores/images/<?php echo $photo1; ?>" 
-                alt=""
-                class='image2'
-            >
-            <div class='image3'>
-                <img 
-                    class='sous-un'
-                    src="./admin/cores/images/<?php echo $photo2; ?>" 
-                    alt="" srcset=""
-                >
-                <img 
-                    src="./admin/cores/images/<?php echo $photo3; ?>" 
-                    alt=""
-                    class='sous-deux'
-                >
-            </div>
-        </div>
-        <div>
-            <?php echo $resumes2; ?>
-        </div>
-         
+    <div>
+        <?php echo $resumes; ?>
     </div>
+        
+    <div class='partie-deux'>
+        <img 
+            src="./admin/cores/images/<?php echo $photo1; ?>" 
+            alt=""
+            class='image2'
+        >
+        <div class='image3'>
+            <img 
+                class='sous-un'
+                src="./admin/cores/images/<?php echo $photo2; ?>" 
+                alt="" srcset=""
+            >
+            <img 
+                src="./admin/cores/images/<?php echo $photo3; ?>" 
+                alt=""
+                class='sous-deux'
+            >
+        </div>
+    </div>
+        
+    <div>
+        <?php echo $resumes2; ?>
+        <hr>
+    </div>
+    <h3 class='read-more'>Lire aussi</h3>
+    <div class='more-article'>
+        <?php
+            require './admin/cores/db.php';
+            $more = $db->query("SELECT * FROM blogs ORDER BY id DESC limit 5");
+            while($all = $more->fetch()){
+                echo"
+                    <div class='more-card'>
+                        <img 
+                            src='./admin/cores/images/".$all['photo_cover']."'
+                            class=pic
+                        >
+                        <h4>".$all['titre']."</h4>
+                        <a href='./article.php?article=".$all['id']."' class='card-link'>
+                            Lire
+                        </a>
+                    </div>        
+                ";}
+        ?>
+    </div>
+</div>
 
-    <?php }}}?>
+<?php }}}?>
 
 <?php require './footer.php'?>

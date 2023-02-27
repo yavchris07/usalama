@@ -26,7 +26,7 @@
 
             <?php
                 require './admin/cores/db.php';
-                $cover = $db->query("SELECT  * FROM blogs ORDER BY id DESC limit 7");
+                $cover = $db->query("SELECT  * FROM blogs ORDER BY id DESC limit 5");
                 while($All = $cover->fetch()){
                     echo "
                     <div 
@@ -35,7 +35,7 @@
                     >
                         <img 
                             style='width: 100%; height: 100%; object-fit: cover;'
-                            src='./admin/cores/images/".$All['photo_cover']."' 
+                            src='./admin/cores/images/".$All['photo_cover']."'
                             alt=''
                         />
                     </div>
@@ -77,7 +77,7 @@
                     <a href='./article.php?article=".$All['id']."' class='card-link'>
                     <div class='card-child1'>
                         <img 
-                            src='./admin/cores/images/".$All['photo2']."'
+                            src='./admin/cores/images/".$All['photo_cover']."'
                             class=pic
                         >
                     </div>

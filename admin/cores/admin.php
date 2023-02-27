@@ -14,7 +14,11 @@ function new_admin(){
 
       $res = $db->exec("INSERT into user (nom,email,passwords) values ('".$nom."','".$email."','".$password."')");
       if($res){
-        echo 'Ajout admin avec succes!';
+        echo "<div class='form-group'>
+        <div class='col-sm-10 col-sm-offset-2'>
+          <?php echo Suppression reussie; ?>    
+        </div>
+      </div>";
         header('location: ../ajoute_admin.php');
         // if(move_uploaded_file($_FILES['img']['tmp_name'],$target)){
         //   echo "Image enregistrez avec Raha sana";

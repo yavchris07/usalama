@@ -110,11 +110,12 @@
                             class=pic
                         >
                         <h4>".$all['titre']."</h4>
-                        <a href='./article.php?article=".$all['id']."' class='card-link'>
+                        <a href='./article.php?article=".$all['id']."''>
                             Lire
                         </a>
                     </div>        
-                ";}
+                "
+            ;}
         ?>
     </div>
 </div>

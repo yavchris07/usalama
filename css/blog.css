@@ -555,6 +555,7 @@ transition: all .45s ease;
   border: 1px solid var(--kprimary);
   padding: 0px 45px;
   background: transparent;
+  text-decoration: none;
 }
 /* ==================================================================== */
 .photo-single{

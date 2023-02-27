@@ -4,8 +4,9 @@
         <li class="nav-item nav-profile border-bottom">
           <a href="#" class="nav-link flex-column">
             <div class="nav-profile-image">
-              <img src="../../img/icons.png" alt="profile" />
+              <!-- <img src="../../img/icons.png" alt="profile" /> -->
               <!--change to offline or busy as needed-->
+             
             </div>
             <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
               <span class="font-weight-semibold mb-1 mt-2 text-center">Admin</span>
@@ -15,7 +16,8 @@
         </li>
         <li class="nav-item pt-3">
           <a class="nav-link d-block" href="dashboard.php" style="text-align:center;">
-            <img src="../../img/icons.png" width="40px" />
+            <!-- <img src="../../img/icons.png" width="40px" /> -->
+            👇 |  ✍
           </a>
           <!-- <form class="d-flex align-items-center" action="#">
             <div class="input-group">
